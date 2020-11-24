@@ -1,20 +1,19 @@
-import React from 'react'
-import logo from './logo.svg'
+import * as React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Home } from './components/Home'
+import { Quizz } from './components/Quizz'
 
-function App() {
+export const App = () => {
   return (
-    <div className="App bg-red-200">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact={true} path="/">
+          <Home />
+        </Route>
+        <Route exact={true} path="/quizz">
+          <Quizz />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
-
-export default App

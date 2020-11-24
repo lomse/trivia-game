@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
 
-  guess-game:
-    container_name: guess-game
+  g2i-guess-game:
+    container_name: g2i-guess-game
     build:
       context: .
       dockerfile: Dockerfile
